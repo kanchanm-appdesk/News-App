@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.BookmarkedFragment">
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_bookmark_news"
         android:layout_width="match_parent"
