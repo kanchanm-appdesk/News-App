@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/article_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10dp"
+    android:padding="@dimen/_8dp"
+    app:cardCornerRadius="@dimen/_8dp"
+    app:cardElevation="@dimen/_8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_200dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:maxLines="1"
+            android:text="@string/title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_poster"
+            app:layout_constraintStart_toStartOf="@+id/iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/iv_poster" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_description"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="2"
+            android:text="@string/description"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/source"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_published_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/published_at"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/tv_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_btn_bookmark"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_bookmark"
+            android:tag="@string/bookmark"
+            app:layout_constraintEnd_toEndOf="@id/tv_published_at"
+            app:layout_constraintTop_toBottomOf="@id/tv_published_at" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_btn_share"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_share"
+            app:layout_constraintEnd_toStartOf="@id/iv_btn_bookmark"
+            app:layout_constraintTop_toBottomOf="@id/tv_published_at" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

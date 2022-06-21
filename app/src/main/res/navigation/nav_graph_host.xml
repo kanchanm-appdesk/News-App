@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_host"
+    app:startDestination="@id/splash_fragment">
+
+    <fragment
+        android:id="@+id/news_details_fragment"
+        android:name="com.appdesk.newsapp.ui.fragment.NewsDetailsFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details" >
+        <argument
+            android:name="article"
+            app:argType="com.appdesk.newsapp.models.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/popular_news_fragment"
+        android:name="com.appdesk.newsapp.ui.fragment.PopularNewsFragment"
+        android:label="fragment_popular_news"
+        tools:layout="@layout/fragment_popular_news" >
+        <action
+            android:id="@+id/action_popularNewsFragment_to_newsDetailsFragment"
+            app:destination="@id/news_details_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.appdesk.newsapp.ui.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_popularNewsFragment"
+            app:destination="@id/popular_news_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/today_news_fragment"
+        android:name="com.appdesk.newsapp.ui.fragment.TodayNewsFragment"
+        android:label="fragment_today_news"
+        tools:layout="@layout/fragment_today_news" >
+        <action
+            android:id="@+id/action_todayNewsFragment_to_newsDetailsFragment"
+            app:destination="@id/news_details_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarked_news_fragment"
+        android:name="com.appdesk.newsapp.ui.fragment.BookmarkedFragment"
+        android:label="fragment_bookmarked"
+        tools:layout="@layout/fragment_bookmarked" >
+        <action
+            android:id="@+id/action_bookmarkedFragment_to_newsDetailsFragment"
+            app:destination="@id/news_details_fragment" />
+    </fragment>
+</navigation>
